@@ -139,6 +139,10 @@
 
 
 
+# my_list = [10, 20, 30, 40, 50]
+# removed_element = my_list.pop()
+
+# print(my_list,"one: " , removed_element)
 
 
 
