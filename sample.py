@@ -253,19 +253,156 @@
 # print(ll[1])
 
 
-class Node :
+# class Node :
+#     def __init__(self,data):
+#         self.data =data
+#         self.next = None
+
+# class Linked_list:
+#     def __init__(self):
+#         self.head = None
+#         self.length = 0
+#     def append(self,data):
+#         new_node = Node(data)
+#         if self.head == None:
+#             self.head = new_node
+#         else:
+#             current_node = self.head
+#             while current_node.next is not None:
+#                 current_node = current_node.next
+#             current_node.next = new_node
+#         self.length +=1
+
+#     def __setitem__(self,index,data):
+#         if index < 0 or index >=self.length:
+#             raise IndexError("error out of range")
+        
+#         else:
+#             current_node = self.head
+
+#             for _ in range(index):
+#                 current_node = current_node.next
+#             current_node.data = data
+#     def __getitem__(self,index):
+#         if index < 0 or index >= self.length:
+#             raise IndexError("error out of reach")
+#         else:
+#             current_node = self.head
+#             for _ in range(index):
+#                 current_node = current_node.next
+            
+#             return current_node.data
+#     def __str__(self):
+#         if self.head == None:
+#             return "no value "
+#         else:
+#             nodes =[]
+#             current_node = self.head
+#             while current_node is not None:
+#                 nodes.append(str(current_node.data))
+#                 current_node = current_node.next
+            
+#             return ' -> '.join(nodes) + ' -> None'
+
+#     def __len__(self):
+
+#         return self.length
+#     def __iter__(self):
+
+#         current_node = self.head
+#         while current_node  is not None:
+#             yield current_node.data
+#             current_node =current_node.next
+   
+        
+#     def pop(self,index=0):
+#         if index >= self.length:
+#             raise IndexError("index out of reach")
+#         elif index == 0:
+#             temp = self.head
+#             self.head = self.head.next
+#             self.length -= 1
+#             return temp.data
+#         else:
+#             current_node =self.head
+#             for _ in range(index-1):
+#                 current_node = current_node.next
+#             temp = current_node.next.data
+#             current_node.next = current_node.next
+
+#             self.length -=1
+#             return temp
+
+#     def __delitem__(self, index):
+#         self.pop(index)
+
+
+# ll = Linked_list()
+
+# ll.append(10)
+# ll.append(12)
+# ll.append(13)
+# for i in range(10):
+#     ll.append(i)
+# ll[5]= 92
+# ll[1] = 99
+# ll[2] = 10
+# # print(ll.head.next.next.data)
+# # del ll[]
+# print(ll)
+# dell=ll.pop(5)
+# print("del:",dell)
+# print(len(ll))
+# print(ll[1])
+# print(ll)
+
+
+class Node:
     def __init__(self,data):
-        self.data =data
+        self.data = data
         self.next = None
 
-class Linked_list:
+
+
+
+# class Linkedlist:
+#     def __init__(self):
+#         self.head= None
+#         self.legnth  = 0
+
+#     def append(self,data):
+#         new_node = Node(data)
+
+#         if self.head == None:
+#             self.head = new_node
+#         else:
+#             current_node = self.head
+
+#             while current_node.next is not None:
+#                 current_node = current_node.next 
+#             current_node.next = new_node
+#         self.legnth += 1
+    
+
+# ll = Linkedlist()
+
+# ll.append(100)
+
+# print(ll.head.data)
+
+            
+
+class Linkedlist:
     def __init__(self):
         self.head = None
         self.length = 0
+
     def append(self,data):
         new_node = Node(data)
+
         if self.head == None:
             self.head = new_node
+
         else:
             current_node = self.head
             while current_node.next is not None:
@@ -273,85 +410,40 @@ class Linked_list:
             current_node.next = new_node
         self.length +=1
 
-    def __setitem__(self,index,data):
-        if index < 0 or index >=self.length:
-            raise IndexError("error out of range")
-        
-        else:
-            current_node = self.head
+    def preppend(self,data):
 
-            for _ in range(index):
-                current_node = current_node.next
-            current_node.data = data
-    def __getitem__(self,index):
-        if index < 0 or index >= self.length:
-            raise IndexError("error out of reach")
-        else:
-            current_node = self.head
-            for _ in range(index):
-                current_node = current_node.next
-            
-            return current_node.data
-    def __str__(self):
+        new_node =  Node(data)
         if self.head == None:
-            return "no value "
+            self.head = new_node
         else:
-            nodes =[]
-            current_node = self.head
-            while current_node is not None:
-                nodes.append(str(current_node.data))
-                current_node = current_node.next
-            
-            return ' -> '.join(nodes) + ' -> None'
+            new_node.next = self.head
+            self.head = new_node
+        self.length +=1
 
-    def __len__(self):
-
-        return self.length
-    def __iter__(self):
-
+    def search(self,data):
         current_node = self.head
-        while current_node  is not None:
-            yield current_node.data
-            current_node =current_node.next
-   
-        
-    def pop(self,index=0):
-        if index >= self.length:
-            raise IndexError("index out of reach")
-        elif index == 0:
-            temp = self.head
-            self.head = self.head.next
-            self.length -= 1
-            return temp.data
-        else:
-            current_node =self.head
-            for _ in range(index-1):
-                current_node = current_node.next
-            temp = current_node.next.data
-            current_node.next = current_node.next
-
-            self.length -=1
-            return temp
-
-    def __delitem__(self, index):
-        self.pop(index)
+        while current_node:
+            if current_node.data == data:
+                return self.length
+            current_node = current_node.next
+        return False
+    
+    
 
 
-ll = Linked_list()
 
+
+ll = Linkedlist()
 ll.append(10)
-ll.append(12)
-ll.append(13)
-for i in range(10):
-    ll.append(i)
-ll[5]= 92
-ll[1] = 99
-ll[2] = 10
-# print(ll.head.next.next.data)
-# del ll[]
-print(ll)
-dell=ll.pop(5)
-print("del:",dell)
-print(len(ll))
-print(ll[1])
-print(ll)
+ll.append(20)
+ll.append(30)
+ll.preppend(40)
+
+print(ll.head.data)
+print(ll.search(20))
+
+    
+
+
+        
+
