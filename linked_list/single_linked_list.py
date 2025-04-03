@@ -52,9 +52,6 @@ class Linked_list:
             yield current_node.value
             current_node=current_node.next
 
-    
-
-
 
 ll = Linked_list()
 ll.append(90)
