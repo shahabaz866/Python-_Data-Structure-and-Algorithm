@@ -14,29 +14,29 @@
 # print(res)
 
 
-class Node:
-    def __init__(self,data):
+# class Node:
+#     def __init__(self,data):
         
-        self.data = data
-        self.next = None
+#         self.data = data
+#         self.next = None
     
-class Linked_list:
-    def __init__(self):
-        self.head = None
-        self.length = 0
+# class Linked_list:
+#     def __init__(self):
+#         self.head = None
+#         self.length = 0
 
-    def append(self,data):
-        new_node = Node(data)
-        if self.head == None:
-            self.head = new_node
-        else:
-            current_node = self.head
+#     def append(self,data):
+#         new_node = Node(data)
+#         if self.head == None:
+#             self.head = new_node
+#         else:
+#             current_node = self.head
 
-            while current_node.next is not None:
-                current_node = current_node.next
-            current_node.next =  new_node
+#             while current_node.next is not None:
+#                 current_node = current_node.next
+#             current_node.next =  new_node
 
-            self.length += 1
+#             self.length += 1
     # def __str__(self):
     #     if self.head == None:
     #         return "No Value exist"
@@ -46,18 +46,18 @@ class Linked_list:
 
     #         while current_node is not None:
     #             print(current_node.data)
-    #             current_node= current_node.next
-    def display(self):
-        if self.head == None:
-            return "No Value exist"
-        else:
-            current_node = self.head
-            # nodes = []
+#     #             current_node= current_node.next
+#     def display(self):
+#         if self.head == None:
+#             return "No Value exist"
+#         else:
+#             current_node = self.head
+#             # nodes = []
 
-            while current_node is not None:
-                print(current_node.data)
-                current_node= current_node.next
-                return 
+#             while current_node is not None:
+#                 print(current_node.data)
+#                 current_node= current_node.next
+#                 return 
 
 
         
@@ -65,11 +65,11 @@ class Linked_list:
             
 
 
-ll = Linked_list()
-ll.append(100)
-ll.append(190)
-ll.append(200)
-ll.append(300)
+# ll = Linked_list()
+# ll.append(100)
+# ll.append(190)
+# ll.append(200)
+# ll.append(300)
 
 # print(ll.head.data)
 # print(ll.display())

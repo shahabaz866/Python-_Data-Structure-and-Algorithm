@@ -357,10 +357,10 @@
 # print(ll)
 
 
-class Node:
-    def __init__(self,data):
-        self.data = data
-        self.next = None
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
 
 
 
@@ -392,58 +392,99 @@ class Node:
 
             
 
-class Linkedlist:
-    def __init__(self):
-        self.head = None
-        self.length = 0
+# class Linkedlist:
+#     def __init__(self):
+#         self.head = None
+#         self.length = 0
 
-    def append(self,data):
-        new_node = Node(data)
+#     def append(self,data):
+#         new_node = Node(data)
 
-        if self.head == None:
-            self.head = new_node
+#         if self.head == None:
+#             self.head = new_node
 
-        else:
-            current_node = self.head
-            while current_node.next is not None:
-                current_node = current_node.next
-            current_node.next = new_node
-        self.length +=1
+#         else:
+#             current_node = self.head
+#             while current_node.next is not None:
+#                 current_node = current_node.next
+#             current_node.next = new_node
+#         self.length +=1
 
-    def preppend(self,data):
+#     def preppend(self,data):
 
-        new_node =  Node(data)
-        if self.head == None:
-            self.head = new_node
-        else:
-            new_node.next = self.head
-            self.head = new_node
-        self.length +=1
+#         new_node =  Node(data)
+#         if self.head == None:
+#             self.head = new_node
+#         else:
+#             new_node.next = self.head
+#             self.head = new_node
+#         self.length +=1
 
-    def search(self,data):
-        current_node = self.head
-        while current_node:
-            if current_node.data == data:
-                return self.length
-            current_node = current_node.next
-        return False
+#     def search(self,data):
+#         current_node = self.head
+#         while current_node:
+#             if current_node.data == data:
+#                 return self.length
+#             current_node = current_node.next
+#         return False
+#     def delete(self,index):
+#         if self.length <= index or index < 0:
+#             return "range out "
+        
+#         else:
+#             current_node = self.head
+
+#             cnt=0
+#             data=None
+#             prev = None
+#             while True:
+#                 if index == cnt :
+#                     if self.head == current_node:
+#                         data = current_node.data
+#                         self.head = current_node.next
+#                         self.length -= 1
+#                         return data
+
+#                     else:
+#                         data = current_node.data
+#                         prev.next = current_node.next
+#                         self.length -= 1
+#                         return data
+
+
+#                 else:
+#                     prev = current_node
+#                     current_node = current_node.next
+#                     cnt+=1
+            
+#     def lengths(self):
+#         return self.length
+
     
-    
 
 
 
 
-ll = Linkedlist()
-ll.append(10)
-ll.append(20)
-ll.append(30)
-ll.preppend(40)
+# ll = Linkedlist()
+# ll.append(10)
+# ll.append(20)
+# ll.append(30)
+# ll.preppend(40)
+# delete=ll.delete(2)
+# print("del data",delete)
+# print("length:",ll.lengths())
 
-print(ll.head.data)
-print(ll.search(20))
+# print(ll.head.data)
+# print(ll.search(20))
 
     
 
 
         
 
+# lst = ["hina","annaan"]
+
+# # lst_r = lst.split()
+# join=' '.join(lst)
+# print(type(join))
+# print(join)
