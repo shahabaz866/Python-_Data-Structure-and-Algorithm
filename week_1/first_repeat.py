@@ -5,30 +5,30 @@
 #         self.next = None
 
 
-# class Linkedlist:
-#     def __init__(self):
-#         self.head = None
-#         self.lenght = 0
+class Linkedlist:
+    def __init__(self):
+        self.head = None
+        self.lenght = 0
     
-#     def remove_mid(head):
-#         if not head or not head.next:
-#             return None
+    def remove_mid(head):
+        if not head or not head.next:
+            return None
         
 
-#         slow = head
-#         fast = head
-#         prev = None
+        slow = head
+        fast = head
+        prev = None
 
 
-#         while fast and fast.next:
-#             fast = fast.next.next
-#             prev = slow 
-#             slow = slow.next 
+        while fast and fast.next:
+            fast = fast.next.next
+            prev = slow 
+            slow = slow.next 
 
-#         if prev : 
-#             prev.next = slow.next 
+        if prev : 
+            prev.next = slow.next 
         
-#         return head 
+        return head 
     
         
 
