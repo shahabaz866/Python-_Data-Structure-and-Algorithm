@@ -5,4 +5,6 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
-print(bubble_sort([5, 1, 4, 2, 8]))
+
+arr=[5, 1, 4, 2, 8]
+print(bubble_sort(arr))
