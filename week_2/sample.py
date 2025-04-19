@@ -88,16 +88,25 @@
 
 # print(ls)
 
-ls = [1, 21, 1, 4, 15, 6, 8]
+# ls = [1, 21, 1, 4, 15, 6, 8]
+# n= len(ls)
+# for i in range(n):
+#     for j in range(n-1-i):
+#         if ls[j] > ls[j+1]:
+#             ls[j],ls[j+1] = ls[j+1],ls[j]
 
-for i in range(len(ls)):
-    print(f"\nRound {i+1}:")
-    for j in range(0, len(ls) - 1 - i):
-        print(f"  Comparing ls[{j}] = {ls[j]} and ls[{j+1}] = {ls[j+1]}")
-        if ls[j] > ls[j + 1]:
-            ls[j], ls[j + 1] = ls[j + 1], ls[j]
-            print(f"  --> Swapped: {ls}")
-        else:
-            print(f"  --> No swap needed")
+    
+# print(ls)
 
-print("\nFinal sorted list:", ls)
+# def bubble_sort(ls,n):
+#     for i in range(n):
+#         for j in range(n-i-1):
+#             if ls[j]>ls[j+1]:
+#                 ls[j],ls[j+1]=ls[j+1],ls[j]
+#     return ls
+# ls = [1, 21, 1, 4, 15, 6, 8]
+# n= len(ls)
+
+# print(bubble_sort(ls,n))
+
+
